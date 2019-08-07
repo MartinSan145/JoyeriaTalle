@@ -163,7 +163,9 @@
                                 <label class="control-label" for="cargo">Cargo</label> 
                             </div>
                            <div class="col-md-3">
+                            
                                 <select class="form-control chosen-select" name="cbocargo" id="cbocargo" disabled="" >
+                                    <option value="0">--SELECCIONAR--</option>
                                     <%
                                         Conexion cn = new  Conexion();
                                         cn.conectar();
@@ -182,7 +184,9 @@
                                 <label class="control-label" for="ciudades">Ciudades</label> 
                             </div>
                            <div class="col-md-3">
+                               
                                 <select class="form-control chosen-select" name="cbociudades" id="cbociudades" disabled="">
+                                   <option value="0">--SELECCIONAR--</option>
                                     <%
                                         
                                         ResultSet rsciudades = cn.combo("select * from ciudades order by idciudad");

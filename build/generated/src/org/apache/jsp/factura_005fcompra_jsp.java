@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import prg.Sesion;
 import prg.Metodo;
 import java.sql.ResultSet;
 import prg.Conexion;
@@ -44,6 +45,7 @@ public final class factura_005fcompra_jsp extends org.apache.jasper.runtime.Http
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -239,27 +241,13 @@ public final class factura_005fcompra_jsp extends org.apache.jasper.runtime.Http
       out.write("                                <label class=\"control-label\" for=\"usuario\">Usuario</label>\n");
       out.write("                            </div>\n");
       out.write("                             <div class=\"col-md-3\">\n");
-      out.write("                                <select class=\"form-control chosen-select\" name=\"cbousuario\" id=\"cbousuario\" disabled>\n");
-      out.write("                                    ");
-
-                                        ResultSet rusu = cn.consultar("select * from usuario order by idusuario");
-                                        while (rusu.next()) {
-                                    
-      out.write("\n");
-      out.write("\n");
-      out.write("                                    <option value=\"");
-      out.print( rusu.getString("idusuario"));
-      out.write('"');
-      out.write('>');
-      out.print( rusu.getString("usuario"));
-      out.write("</option>     \n");
-      out.write("\n");
-      out.write("                                    ");
-
-                                        }
-                                    
-      out.write("\n");
-      out.write("                                </select>\n");
+      out.write("                                       <input type=\"text\" value=\"");
+      out.print(Sesion.perfil);
+      out.write("\" class=\"form-control chosen-select\" name=\"cbousuarioo\" id=\"cbousuarioo\" disabled>\n");
+      out.write("                                                <input type=\"hidden\" value=\"");
+      out.print(Sesion.codigo_usuario);
+      out.write("\" class=\"form-control chosen-select\" name=\"cbousuario\" id=\"cbousuario\" disabled>  \n");
+      out.write("                                           \n");
       out.write("                            </div>\n");
       out.write("                       \n");
       out.write("                            <div class=\"col-md-1\">\n");

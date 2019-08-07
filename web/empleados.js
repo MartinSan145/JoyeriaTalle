@@ -106,7 +106,7 @@ function grabar() {
         var conf = "";
         if ($("#operacion").val() === "1") {
             sql = "insert into empleado values(" + $("#txtcodigo").val() + ",upper ('" + $("#txtnombre").val() + "'), '" +$("#txtapellido").val()+ "', '" +$("#txtcedula").val()+ "', '" +$("#txtdireccion").val() + "', '" +$("#cbociudades").val()+ "', '" +$("#cbocargo").val()+"')";
-           alertify.alert(sql);
+         //  alertify.alert(sql);
             conf = "¿DESEA GRABAR EL NUEVO EMPLEADO?";
             men = "EL NUEVO EMPLEADO FUE REGISTRADO CON EXITO";
         }
